@@ -20,4 +20,4 @@ elif inp == "2":
 else:
     print "Error! Please enter '1' or '2'!"
 
-# Version 0.3.0
+# Version 0.3.1
