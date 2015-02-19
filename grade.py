@@ -3,8 +3,8 @@ inp = raw_input ("Enter score (between 0 and 1): ")
 if inp == "":
     print "Error! Please enter score between 0 and 1!"
     quit()
-else:
-    score = float(inp)
+
+score = float(inp)
 
 if score < 0 or score > 1:
     print "Error! Please enter score between 0 and 1!"
