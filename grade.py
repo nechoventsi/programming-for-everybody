@@ -1,11 +1,12 @@
 inp = raw_input ("Enter score (between 0 and 1): ")
-score = float(inp)
 
-if score > 1:
+if inp == "":
     print "Error! Please enter score between 0 and 1!"
     quit()
+else:
+    score = float(inp)
 
-elif score < 0:
+if score < 0 or score > 1:
     print "Error! Please enter score between 0 and 1!"
     quit()
 
@@ -22,5 +23,5 @@ else:
     elif score >= 0.6:
         print "Grade: D"
 
-    elif score < 0.6:
+    else:
         print "Grade: F"
