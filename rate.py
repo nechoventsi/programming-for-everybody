@@ -1,16 +1,20 @@
-hours = raw_input ("Enter hours: ")
-rate = raw_input ("Enter rate: ")
+try:
+    inp = raw_input ("Enter hours: ")
+    hours = float(inp)
+    inp = raw_input ("Enter rate: ")
+    rate = float(inp)
 
-hrs_fl = float(hours)
-rt_fl = float(rate)
+except:
+    print "Error! Please enter numeric input!"
+    quit()
 
-if hrs_fl > 40:
-    over_40 = hrs_fl - 40
-    result = (40 * rt_fl) + (over_40 * (rt_fl * 1.5))
+if hours > 40:
+    over_40 = hours - 40
+    result = (40 * rate) + (over_40 * (rate * 1.5))
     print "Pay:", result
 
 else:
-    result = hrs_fl * rt_fl
+    result = hours * rate
     print "Pay:", result
 
-# Version 0.3.1
+# Version 0.3.2
