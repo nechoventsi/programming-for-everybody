@@ -1,8 +1,8 @@
 try:
-    inp = raw_input ("Enter hours: ")
-    hours = float(inp)
-    inp = raw_input ("Enter rate: ")
-    rate = float(inp)
+    inp_hr = raw_input ("Enter hours: ")
+    hours = float(inp_hr)
+    inp_rt = raw_input ("Enter rate: ")
+    rate = float(inp_rt)
 
 except:
     print "Error! Please enter numeric input!"
@@ -17,4 +17,4 @@ else:
     result = hours * rate
     print "Pay:", result
 
-# Version 0.3.2
+# Version 0.3.3
