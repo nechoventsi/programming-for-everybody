@@ -9,16 +9,22 @@ fhandle = open(fname)
 count = 0
 spam = 0
 
-for line in fhandle:
-    if line.startswith("X-DSPAM-Confidence:"):
-        count = count + 1
-        colon = line.find(":")
-        if spam == 0:
+try:
+
+    for line in fhandle:
+        if line.startswith("X-DSPAM-Confidence:"):
+            count = count + 1
+            colon = line.find(":")
+            if spam == 0:
             spam = float(line[colon + 1:])
-        else:
-            spam = spam + float(line[colon + 1:])
+            else:
+                spam = spam + float(line[colon + 1:])
+
+except:
+    print "Error! Bad input data!"
+    quit()
 
 avspam = spam / count
 print "Average spam confidence:", avspam
 
-# Version 0.1.0
+# Version 0.1.1
